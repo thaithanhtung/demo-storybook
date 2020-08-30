@@ -1,0 +1,460 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import Code from './assets/code-brackets.svg';
+import Colors from './assets/colors.svg';
+import Comments from './assets/comments.svg';
+import Direction from './assets/direction.svg';
+import Flow from './assets/flow.svg';
+import Plugin from './assets/plugin.svg';
+import Repo from './assets/repo.svg';
+import StackAlt from './assets/stackalt.svg';
+import ImageSlide from '../../src/components/ImageSlideCustom';
+
+<Meta title='Example/SlideImage/doc' />
+
+<style>{`
+  .subheading {
+    --mediumdark: '#999999';
+    font-weight: 900;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 6px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+
+  .row-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+  }
+
+  @media (min-width: 620px) {
+    .link-list {
+      row-gap: 20px;
+      column-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media all and (-ms-high-contrast:none) {
+  .link-list {
+      display: -ms-grid;
+      -ms-grid-columns: 1fr 1fr;
+      -ms-grid-rows: 1fr 1fr;
+    }
+  }
+
+  .link-item {
+    display: block;
+    padding: 20px 30px 20px 15px;
+    border: 1px solid #00000010;
+    border-radius: 5px;
+    transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
+    color: #333333;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .link-item:hover {
+    border-color: #1EA7FD50;
+    transform: translate3d(0, -3px, 0);
+    box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
+  }
+
+  .link-item:active {
+    border-color: #1EA7FD;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .link-item strong {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 2px;
+  }
+  
+  .link-item img {
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    flex: none;
+  }
+
+  .link-item span {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .tip {
+    display: inline-block;
+    border-radius: 1em;
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: 700;
+    background: #E7FDD8;
+    color: #66BF3C;
+    padding: 4px 12px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+
+  .tip-wrapper {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .tip-wrapper code {
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  
+`}</style>
+
+# Chào mừng bạn đến với component ImageSlideCustom
+
+Trong đây mình sẽ hướng dẫn bạn cách sử dụng component ImageSlideCustom:
+
+Trong commponent này điều quan trọng nhất là bạn phải có 1 mãng những hình ảnh có cấu trúc như sau: [{id: '', image: 'đường dẫn đến hình ảnh của bạn' }] 2 phần này là quan trọng nhất nếu không có thì không chạy đâu nhé
+
+<div class='subheading'>ImageSlide</div>
+
+<div className='row-list'>
+  <ImageSlide
+    images={[
+      {
+        id: 1,
+        image:
+          'https://nguyendangtam.com/wp-content/uploads/2019/08/anh-gai-xinh-ky-le-hieu-1.jpg',
+      },
+      {
+        id: 2,
+        image:
+          'https://img.thuthuat123.com/uploads/2019/10/17/anh-nen-gai-xinh-viet-nam-dep-nhat_110152854.jpg',
+      },
+      {
+        id: 3,
+        image:
+          'https://1.bp.blogspot.com/-wkJ6XCQrBwY/XlpeqAamQNI/AAAAAAAAWUA/rgZN1alVCS4iM4NtvrEGPnAe3C0DNapUACLcBGAsYHQ/s1600/Anh-gai-xinh-deo-kinh%2B%252875%2529.jpg',
+      },
+      {
+        id: 4,
+        image:
+          'https://img2.thuthuatphanmem.vn/uploads/2019/01/04/hinh-co-gai-xinh-dep-de-thuong_025104709.jpg',
+      },
+      {
+        id: 5,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/2/24/3561716420480213454575853861059020806684672n-15510057259571546306615.jpg',
+      },
+      {
+        id: 6,
+        image:
+          'https://vnn-imgs-f.vgcloud.vn/2019/05/03/11/co-gai-khien-hot-girl-tram-anh-bi-lu-mo-vi-qua-xinh-dep-3.jpg',
+      },
+      {
+        id: 7,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/6/2/a3-1559455128259448461272.jpg',
+      },
+      {
+        id: 8,
+        image:
+          'https://nguyendangtam.com/wp-content/uploads/2019/08/anh-gai-xinh-ky-le-hieu-1.jpg',
+      },
+      {
+        id: 9,
+        image:
+          'https://img.thuthuat123.com/uploads/2019/10/17/anh-nen-gai-xinh-viet-nam-dep-nhat_110152854.jpg',
+      },
+      {
+        id: 10,
+        image:
+          'https://1.bp.blogspot.com/-wkJ6XCQrBwY/XlpeqAamQNI/AAAAAAAAWUA/rgZN1alVCS4iM4NtvrEGPnAe3C0DNapUACLcBGAsYHQ/s1600/Anh-gai-xinh-deo-kinh%2B%252875%2529.jpg',
+      },
+      {
+        id: 11,
+        image:
+          'https://img2.thuthuatphanmem.vn/uploads/2019/01/04/hinh-co-gai-xinh-dep-de-thuong_025104709.jpg',
+      },
+      {
+        id: 12,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/2/24/3561716420480213454575853861059020806684672n-15510057259571546306615.jpg',
+      },
+      {
+        id: 13,
+        image:
+          'https://vnn-imgs-f.vgcloud.vn/2019/05/03/11/co-gai-khien-hot-girl-tram-anh-bi-lu-mo-vi-qua-xinh-dep-3.jpg',
+      },
+      {
+        id: 14,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/6/2/a3-1559455128259448461272.jpg',
+      },
+    ]}
+  />
+</div>
+
+<div>
+  <span class='tip'>Tip</span>Thay đổi đọ dài slide
+</div>
+
+Độ dài mặc định của slide là kích cỡ device của bạn còn nếu muốn thay đổi độ dài thì chỉ cần truyền thêm thuộc tính customViewWidth={"số bất kì"} là sẽ thay đổi khoản cách của nó được nhé
+Ví dụ: customViewWidth={500}
+
+<div className='row-list'>
+  <ImageSlide
+    customViewWidth={500}
+    images={[
+      {
+        id: 1,
+        image:
+          'https://nguyendangtam.com/wp-content/uploads/2019/08/anh-gai-xinh-ky-le-hieu-1.jpg',
+      },
+      {
+        id: 2,
+        image:
+          'https://img.thuthuat123.com/uploads/2019/10/17/anh-nen-gai-xinh-viet-nam-dep-nhat_110152854.jpg',
+      },
+      {
+        id: 3,
+        image:
+          'https://1.bp.blogspot.com/-wkJ6XCQrBwY/XlpeqAamQNI/AAAAAAAAWUA/rgZN1alVCS4iM4NtvrEGPnAe3C0DNapUACLcBGAsYHQ/s1600/Anh-gai-xinh-deo-kinh%2B%252875%2529.jpg',
+      },
+      {
+        id: 4,
+        image:
+          'https://img2.thuthuatphanmem.vn/uploads/2019/01/04/hinh-co-gai-xinh-dep-de-thuong_025104709.jpg',
+      },
+      {
+        id: 5,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/2/24/3561716420480213454575853861059020806684672n-15510057259571546306615.jpg',
+      },
+      {
+        id: 6,
+        image:
+          'https://vnn-imgs-f.vgcloud.vn/2019/05/03/11/co-gai-khien-hot-girl-tram-anh-bi-lu-mo-vi-qua-xinh-dep-3.jpg',
+      },
+      {
+        id: 7,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/6/2/a3-1559455128259448461272.jpg',
+      },
+      {
+        id: 8,
+        image:
+          'https://nguyendangtam.com/wp-content/uploads/2019/08/anh-gai-xinh-ky-le-hieu-1.jpg',
+      },
+      {
+        id: 9,
+        image:
+          'https://img.thuthuat123.com/uploads/2019/10/17/anh-nen-gai-xinh-viet-nam-dep-nhat_110152854.jpg',
+      },
+      {
+        id: 10,
+        image:
+          'https://1.bp.blogspot.com/-wkJ6XCQrBwY/XlpeqAamQNI/AAAAAAAAWUA/rgZN1alVCS4iM4NtvrEGPnAe3C0DNapUACLcBGAsYHQ/s1600/Anh-gai-xinh-deo-kinh%2B%252875%2529.jpg',
+      },
+      {
+        id: 11,
+        image:
+          'https://img2.thuthuatphanmem.vn/uploads/2019/01/04/hinh-co-gai-xinh-dep-de-thuong_025104709.jpg',
+      },
+      {
+        id: 12,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/2/24/3561716420480213454575853861059020806684672n-15510057259571546306615.jpg',
+      },
+      {
+        id: 13,
+        image:
+          'https://vnn-imgs-f.vgcloud.vn/2019/05/03/11/co-gai-khien-hot-girl-tram-anh-bi-lu-mo-vi-qua-xinh-dep-3.jpg',
+      },
+      {
+        id: 14,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/6/2/a3-1559455128259448461272.jpg',
+      },
+    ]}
+  />
+</div>
+
+<div>
+  <span class='tip'>Tip</span>Ẩn hiện 2 button next và prev
+</div>
+
+Đơn giản vô cùng chúng tôi cung cấp 1 thuộc tính clearBtn để bạn có thể tùy chỉnh ẩn hiện 2 btn này nhé
+
+<div className='row-list'>
+  <ImageSlide
+    customViewWidth={900}
+    clearBtn
+    images={[
+      {
+        id: 1,
+        image:
+          'https://nguyendangtam.com/wp-content/uploads/2019/08/anh-gai-xinh-ky-le-hieu-1.jpg',
+      },
+      {
+        id: 2,
+        image:
+          'https://img.thuthuat123.com/uploads/2019/10/17/anh-nen-gai-xinh-viet-nam-dep-nhat_110152854.jpg',
+      },
+      {
+        id: 3,
+        image:
+          'https://1.bp.blogspot.com/-wkJ6XCQrBwY/XlpeqAamQNI/AAAAAAAAWUA/rgZN1alVCS4iM4NtvrEGPnAe3C0DNapUACLcBGAsYHQ/s1600/Anh-gai-xinh-deo-kinh%2B%252875%2529.jpg',
+      },
+      {
+        id: 4,
+        image:
+          'https://img2.thuthuatphanmem.vn/uploads/2019/01/04/hinh-co-gai-xinh-dep-de-thuong_025104709.jpg',
+      },
+      {
+        id: 5,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/2/24/3561716420480213454575853861059020806684672n-15510057259571546306615.jpg',
+      },
+      {
+        id: 6,
+        image:
+          'https://vnn-imgs-f.vgcloud.vn/2019/05/03/11/co-gai-khien-hot-girl-tram-anh-bi-lu-mo-vi-qua-xinh-dep-3.jpg',
+      },
+      {
+        id: 7,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/6/2/a3-1559455128259448461272.jpg',
+      },
+      {
+        id: 8,
+        image:
+          'https://nguyendangtam.com/wp-content/uploads/2019/08/anh-gai-xinh-ky-le-hieu-1.jpg',
+      },
+      {
+        id: 9,
+        image:
+          'https://img.thuthuat123.com/uploads/2019/10/17/anh-nen-gai-xinh-viet-nam-dep-nhat_110152854.jpg',
+      },
+      {
+        id: 10,
+        image:
+          'https://1.bp.blogspot.com/-wkJ6XCQrBwY/XlpeqAamQNI/AAAAAAAAWUA/rgZN1alVCS4iM4NtvrEGPnAe3C0DNapUACLcBGAsYHQ/s1600/Anh-gai-xinh-deo-kinh%2B%252875%2529.jpg',
+      },
+      {
+        id: 11,
+        image:
+          'https://img2.thuthuatphanmem.vn/uploads/2019/01/04/hinh-co-gai-xinh-dep-de-thuong_025104709.jpg',
+      },
+      {
+        id: 12,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/2/24/3561716420480213454575853861059020806684672n-15510057259571546306615.jpg',
+      },
+      {
+        id: 13,
+        image:
+          'https://vnn-imgs-f.vgcloud.vn/2019/05/03/11/co-gai-khien-hot-girl-tram-anh-bi-lu-mo-vi-qua-xinh-dep-3.jpg',
+      },
+      {
+        id: 14,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/6/2/a3-1559455128259448461272.jpg',
+      },
+    ]}
+  />
+</div>
+
+<div>
+  <span class='tip'>Tip</span>Bạn có muốn thay đổi màu sắc khi click vào 1 hình
+  ảnh trong slide không
+</div>
+
+Chúng tôi có cung cấp cho bạn 1 thuộc tính chooseColor để giải quyết vấn đề này hiện tại chỉ hỗ trợ 4 option là: 'red', 'blue', 'green', 'transparent'
+Vd: chooseColor: 'red',
+
+<div className='row-list'>
+  <ImageSlide
+    chooseColor='red'
+    customViewWidth={1000}
+    images={[
+      {
+        id: 1,
+        image:
+          'https://nguyendangtam.com/wp-content/uploads/2019/08/anh-gai-xinh-ky-le-hieu-1.jpg',
+      },
+      {
+        id: 2,
+        image:
+          'https://img.thuthuat123.com/uploads/2019/10/17/anh-nen-gai-xinh-viet-nam-dep-nhat_110152854.jpg',
+      },
+      {
+        id: 3,
+        image:
+          'https://1.bp.blogspot.com/-wkJ6XCQrBwY/XlpeqAamQNI/AAAAAAAAWUA/rgZN1alVCS4iM4NtvrEGPnAe3C0DNapUACLcBGAsYHQ/s1600/Anh-gai-xinh-deo-kinh%2B%252875%2529.jpg',
+      },
+      {
+        id: 4,
+        image:
+          'https://img2.thuthuatphanmem.vn/uploads/2019/01/04/hinh-co-gai-xinh-dep-de-thuong_025104709.jpg',
+      },
+      {
+        id: 5,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/2/24/3561716420480213454575853861059020806684672n-15510057259571546306615.jpg',
+      },
+      {
+        id: 6,
+        image:
+          'https://vnn-imgs-f.vgcloud.vn/2019/05/03/11/co-gai-khien-hot-girl-tram-anh-bi-lu-mo-vi-qua-xinh-dep-3.jpg',
+      },
+      {
+        id: 7,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/6/2/a3-1559455128259448461272.jpg',
+      },
+      {
+        id: 8,
+        image:
+          'https://nguyendangtam.com/wp-content/uploads/2019/08/anh-gai-xinh-ky-le-hieu-1.jpg',
+      },
+      {
+        id: 9,
+        image:
+          'https://img.thuthuat123.com/uploads/2019/10/17/anh-nen-gai-xinh-viet-nam-dep-nhat_110152854.jpg',
+      },
+      {
+        id: 10,
+        image:
+          'https://1.bp.blogspot.com/-wkJ6XCQrBwY/XlpeqAamQNI/AAAAAAAAWUA/rgZN1alVCS4iM4NtvrEGPnAe3C0DNapUACLcBGAsYHQ/s1600/Anh-gai-xinh-deo-kinh%2B%252875%2529.jpg',
+      },
+      {
+        id: 11,
+        image:
+          'https://img2.thuthuatphanmem.vn/uploads/2019/01/04/hinh-co-gai-xinh-dep-de-thuong_025104709.jpg',
+      },
+      {
+        id: 12,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/2/24/3561716420480213454575853861059020806684672n-15510057259571546306615.jpg',
+      },
+      {
+        id: 13,
+        image:
+          'https://vnn-imgs-f.vgcloud.vn/2019/05/03/11/co-gai-khien-hot-girl-tram-anh-bi-lu-mo-vi-qua-xinh-dep-3.jpg',
+      },
+      {
+        id: 14,
+        image:
+          'https://kenh14cdn.com/thumb_w/660/2019/6/2/a3-1559455128259448461272.jpg',
+      },
+    ]}
+  />
+</div>
+
+Hiện tại mình chỉ làm demo 1 vài chức năng cơ bản nhất thôi nhé
