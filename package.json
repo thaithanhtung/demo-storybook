@@ -22,6 +22,11 @@
     "build-storybook": "build-storybook -s public",
     "deploy-storybook": "storybook-to-ghpages"
   },
+  "storybook-deployer": {
+    "gitUsername": "Tung Thai",
+    "gitEmail": "Thajcaca@gmai.com",
+    "commitMessage": "Deploy Storybook"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
