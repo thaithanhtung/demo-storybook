@@ -20,7 +20,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "chromatic": "npx chromatic --project-token 9s05qnv99dl"
   },
   "storybook-deployer": {
     "gitUsername": "Tung Thai",
@@ -52,6 +53,7 @@
     "@storybook/react": "^6.0.12",
     "@storybook/storybook-deployer": "^2.8.6",
     "babel-loader": "^8.1.0",
+    "chromatic": "^5.2.0",
     "react-is": "^16.13.1"
   }
 }

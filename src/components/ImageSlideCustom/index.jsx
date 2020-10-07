@@ -137,7 +137,7 @@ const ImageSlideCustom = ({
 
 ImageSlideCustom.propTypes = {
   /**
-   Danh sách những hình ảnh trong slide . Phần tử trong mãng có cấu trúc như sau [{id: 'số bất kì, image: 'link dẫn đến hình ảnh' }]
+   Danh sách những hình ảnh trong slide. Phần tử trong mãng có cấu trúc như sau [{id: 'số bất kì, image: 'link dẫn đến hình ảnh' }]
   */
   images: PropTypes.array.isRequired,
 
@@ -152,7 +152,7 @@ ImageSlideCustom.propTypes = {
   */
   setShowData: PropTypes.func,
   /**
-   Độ dài cửa slide mặc định là dộ dài của màng hình
+   Độ dài của slide mặc định là độ dài của màn hình
   */
   customViewWidth: PropTypes.number,
   /**
